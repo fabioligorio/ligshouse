@@ -1,0 +1,208 @@
+{
+ "tasks": {
+  "u2e4z029ce1p4opkkhz1": {
+   "area": "pet",
+   "category": "alimentacao",
+   "createdAt": "2026-10-22T03:42:58.943Z",
+   "example": false,
+   "freq": {
+    "type": "daily"
+   },
+   "history": [],
+   "lastDone": null,
+   "petId": "__all",
+   "title": "Colocar comida cachorros",
+   "turno": "noite"
+  },
+  "ui4p4fol16pjn442fs7i": {
+   "area": "casa",
+   "category": "limpeza",
+   "createdAt": "2026-10-22T03:25:49.098Z",
+   "example": false,
+   "freq": {
+    "date": "2026-10-22",
+    "type": "date"
+   },
+   "history": [],
+   "lastDone": null,
+   "petId": null,
+   "title": "cortar grama dos fundos",
+   "turno": "manha"
+  },
+  "y2kf1tyghbdo2seu25ub": {
+   "area": "pet",
+   "category": "agua",
+   "createdAt": "2026-10-22T03:39:52.772Z",
+   "example": false,
+   "freq": {
+    "type": "daily"
+   },
+   "history": [],
+   "lastDone": null,
+   "petId": "__all",
+   "title": "Trocar potes de água",
+   "turno": "livre"
+  }
+ },
+ "compras": {
+  "idf5mepk6s3o7qayyiln": {
+   "bought": false,
+   "boughtAt": null,
+   "createdAt": "2026-10-22T03:31:21.832Z",
+   "list": "casa",
+   "name": "Sabão em pó",
+   "qty": "1"
+  },
+  "ynwtqsb526igw9qe1skr": {
+   "bought": false,
+   "boughtAt": null,
+   "createdAt": "2026-10-22T03:33:35.457Z",
+   "list": "casa",
+   "name": "Vinagrete de álcool",
+   "qty": "2"
+  },
+  "xksrcjqcmf3e20xiol73": {
+   "bought": false,
+   "boughtAt": null,
+   "createdAt": "2026-10-22T03:33:47.928Z",
+   "list": "casa",
+   "name": "Ovo",
+   "qty": "12"
+  }
+ },
+ "dias": {
+  "2026-10-22": {
+   "completo": false,
+   "date": "2026-10-22",
+   "done": 0,
+   "tasks": [
+    {
+     "area": "pet",
+     "cat": "Alimentação",
+     "category": "alimentacao",
+     "done": false,
+     "id": "u2e4z029ce1p4opkkhz1",
+     "pet": "Hagrid e Hermione",
+     "petId": "__all",
+     "title": "Colocar comida cachorros",
+     "turno": "noite"
+    },
+    {
+     "area": "casa",
+     "cat": "Limpeza",
+     "category": "limpeza",
+     "done": false,
+     "id": "ui4p4fol16pjn442fs7i",
+     "pet": "",
+     "petId": null,
+     "title": "cortar grama dos fundos",
+     "turno": "manha"
+    },
+    {
+     "area": "pet",
+     "cat": "Água",
+     "category": "agua",
+     "done": false,
+     "id": "y2kf1tyghbdo2seu25ub",
+     "pet": "Hagrid e Hermione",
+     "petId": "__all",
+     "title": "Trocar potes de água",
+     "turno": "livre"
+    }
+   ],
+   "total": 3,
+   "updatedAt": "2026-10-22T03:43:12.101Z"
+  }
+ },
+ "memoria": {
+  "geral": {
+   "compras": {
+    "casa": {
+     "ovo": {
+      "n": 1,
+      "name": "Ovo",
+      "qty": "12"
+     },
+     "sabão em pó": {
+      "n": 1,
+      "name": "Sabão em pó",
+      "qty": "1"
+     },
+     "vinagrete de álcool": {
+      "n": 1,
+      "name": "Vinagrete de álcool",
+      "qty": "2"
+     }
+    },
+    "pets": {}
+   },
+   "petNames": {
+    "hagrid": {
+     "name": "Hagrid",
+     "species": "cachorro"
+    },
+    "hermione": {
+     "name": "Hermione",
+     "species": "cachorro"
+    }
+   },
+   "qtys": {
+    "1": 1,
+    "2": 1,
+    "12": 1
+   },
+   "tasks": {
+    "colocar comida cachorros": {
+     "area": "pet",
+     "category": "alimentacao",
+     "freq": {
+      "type": "daily"
+     },
+     "n": 1,
+     "petId": "__all",
+     "title": "Colocar comida cachorros",
+     "turno": "noite"
+    },
+    "cortar grama dos fundos": {
+     "area": "casa",
+     "category": "limpeza",
+     "freq": {
+      "type": "date"
+     },
+     "n": 1,
+     "petId": null,
+     "title": "cortar grama dos fundos",
+     "turno": "manha"
+    },
+    "trocar potes de água": {
+     "area": "pet",
+     "category": "agua",
+     "freq": {
+      "type": "daily"
+     },
+     "n": 1,
+     "petId": "__all",
+     "title": "Trocar potes de água",
+     "turno": "livre"
+    }
+   }
+  }
+ },
+ "pets": {
+  "hagrid": {
+   "createdAt": "2026-10-22T03:30:00Z",
+   "example": false,
+   "name": "Hagrid",
+   "notes": "",
+   "species": "cachorro"
+  },
+  "hermione": {
+   "createdAt": "2026-10-22T03:30:01Z",
+   "example": false,
+   "name": "Hermione",
+   "notes": "",
+   "species": "cachorro"
+  }
+ },
+ "historico": {}
+}
