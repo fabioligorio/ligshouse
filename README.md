@@ -1,4 +1,4 @@
-# Rotina da Casa
+# LigsHouse
 
 App web para organizar as tarefas da casa e os cuidados do Hagrid e da Hermione, com lista de compras, registro de compras e relatórios dos dias. Funciona em qualquer navegador e pode ser adicionado à tela de início do celular como um app.
 
@@ -15,7 +15,7 @@ App web para organizar as tarefas da casa e os cuidados do Hagrid e da Hermione,
 2. No projeto criado, abra **Storage** → **Create Database** → **Upstash for Redis** (Marketplace) e conecte ao projeto. A Vercel cria sozinha as variáveis `KV_REST_API_URL` e `KV_REST_API_TOKEN`.
 3. Em **Settings → Environment Variables**, crie `APP_PIN` com o PIN que você quer usar (por exemplo, 4 a 6 números).
 4. Em **Deployments**, faça um **Redeploy** para as variáveis valerem.
-5. Abra o endereço do projeto (algo como `rotina-da-casa.vercel.app`), digite o PIN e pronto.
+5. Abra o endereço do projeto (algo como `ligshouse.vercel.app`), digite o PIN e pronto.
 
 ## Atalho no celular
 

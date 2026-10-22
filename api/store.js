@@ -1,4 +1,4 @@
-// API da Rotina da Casa — guarda os dados no Redis (Upstash) da Vercel.
+// API da LigsHouse — guarda os dados no Redis (Upstash) da Vercel.
 // GET  /api/store            -> todas as coleções { pets: {id: doc}, tasks: {...}, ... }
 // POST /api/store {ops:[...]} -> aplica escritas: {op:'set'|'update'|'delete', c, id, data}
 // Toda chamada precisa do cabeçalho x-pin igual à variável de ambiente APP_PIN.

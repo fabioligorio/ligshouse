@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Rotina da Casa</title>
+<title>LigsHouse</title>
 <meta name="theme-color" content="#2E6A4E">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Rotina">
+<meta name="apple-mobile-web-app-title" content="LigsHouse">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -255,7 +255,7 @@ function overdue(t){const td=today();if(t.lastDone===td)return 0;const n=nextDue
 function render(){
   document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-current',b.dataset.tab===tab?'page':'false'));
   const v=$('#view');
-  if(dbState==='off'){v.innerHTML=`<div class="head"><span class="eyebrow">Rotina da Casa</span><h1>Não foi possível conectar</h1><p class="muted">${esc(offMsg||'Verifique a internet e tente de novo.')}</p><button class="btn" onclick="location.reload()">Tentar de novo</button></div>`;return}
+  if(dbState==='off'){v.innerHTML=`<div class="head"><span class="eyebrow">LigsHouse</span><h1>Não foi possível conectar</h1><p class="muted">${esc(offMsg||'Verifique a internet e tente de novo.')}</p><button class="btn" onclick="location.reload()">Tentar de novo</button></div>`;return}
   if(!(petsLoaded&&tasksLoaded)){return}
   const act=document.activeElement&&document.activeElement.id;const keep={};
   ['c-name','c-qty'].forEach(id=>{const el=document.getElementById(id);if(el)keep[id]=el.value});
@@ -727,7 +727,7 @@ function createStore(pin){
 }
 function askPin(wrong){
   const v=$('#view');
-  v.innerHTML=`<div class="head"><span class="eyebrow">Rotina da Casa</span><h1>Digite seu PIN</h1><p class="muted">${wrong?'PIN incorreto. Tente de novo.':'O PIN protege suas rotinas. Ele fica salvo neste aparelho.'}</p></div>
+  v.innerHTML=`<div class="head"><span class="eyebrow">LigsHouse</span><h1>Digite seu PIN</h1><p class="muted">${wrong?'PIN incorreto. Tente de novo.':'O PIN protege os dados da LigsHouse. Ele fica salvo neste aparelho.'}</p></div>
   <form id="pin-form" class="add-row" autocomplete="off"><input id="pin-in" type="password" inputmode="numeric" placeholder="PIN" aria-label="PIN" required><button class="btn primary" type="submit">Entrar</button></form>`;
   const f=$('#pin-form');f.addEventListener('submit',e=>{e.preventDefault();const p=$('#pin-in').value.trim();if(!p)return;try{localStorage.setItem('rc-pin',p)}catch(_){}boot(p)});
   setTimeout(()=>{const i=$('#pin-in');i&&i.focus()},50);
