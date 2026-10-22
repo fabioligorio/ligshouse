@@ -4,7 +4,7 @@ App web pessoal do Fabio para organizar a casa e os cuidados dos cachorros **Hag
 
 ## Estrutura
 
-- `index.html` — o app inteiro: HTML, CSS e JavaScript puro, sem build nem dependências. Fontes do Google Fonts (Bricolage Grotesque e Figtree).
+- `index.html` — o app inteiro: HTML, CSS e JavaScript puro, sem build nem dependências. Fonte Manrope (Google Fonts). Paleta: Preto Noite #0B0F14, Azul Casa #2155E6 (marca, casa, botões), Verde Quintal #16A36A (animais, concluído; texto preto sobre ele), Grafite #2A313A, Branco Gelo #F4F6F8. Logo: quadrado preto com telhado azul e porta verde (icon.svg).
 - `api/store.js` — função serverless da Vercel (Node, CommonJS). Guarda os dados no Upstash Redis pela REST API (`KV_REST_API_URL`/`KV_REST_API_TOKEN` ou `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`). Protegida pelo cabeçalho `x-pin`, comparado com a variável `APP_PIN`.
 - `api/_seed.json` — dados exportados da primeira versão (feita como artifact no claude.ai). Importados uma única vez quando o banco está vazio (chave `rc:seeded`).
 - `manifest.webmanifest`, `icon*.png`, `icon.svg`, `apple-touch-icon.png` — instalação como app no celular.

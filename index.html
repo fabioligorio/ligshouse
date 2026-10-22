@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>LigsHouse</title>
-<meta name="theme-color" content="#2E6A4E">
+<meta name="theme-color" content="#0B0F14">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="LigsHouse">
@@ -14,22 +14,22 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
 <style>
 /* Layout: one-column phone app — day header with progress, tasks grouped by turno, fixed bottom tab bar, bottom sheet for forms */
 :root{
-  --bg:#ECEFE8; --surface:#FAFBF7; --ink:#1B2924; --muted:#5D6A63; --line:#D3DACF;
-  --leaf:#2E6A4E; --leaf-soft:#DCE9E0; --pet:#A86C0A; --pet-soft:#F4E6C8; --warn:#B0412B; --warn-soft:#F6DDD5;
-  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
-  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg:#F4F6F8; --surface:#FFFFFF; --ink:#0B0F14; --muted:#5A6470; --line:#D5DAE0;
+  --leaf:#2155E6; --leaf-soft:#E3EAFD; --pet:#0F7A4F; --pet-soft:#DDF3E8; --warn:#B0412B; --warn-soft:#F6DDD5;
+  --display:"Manrope", "Segoe UI", system-ui, sans-serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   --nav-h:62px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#111714; --surface:#19211D; --ink:#E4EBE6; --muted:#97A59D; --line:#2A3530;
-  --leaf:#72C29A; --leaf-soft:#1F3329; --pet:#E3AE52; --pet-soft:#3A2E17; --warn:#F08A72; --warn-soft:#3B211B; color-scheme:dark}}
+  --bg:#0B0F14; --surface:#141A21; --ink:#E8ECF1; --muted:#9AA4B0; --line:#252D37;
+  --leaf:#6F95FF; --leaf-soft:#16213D; --pet:#3FCF8E; --pet-soft:#112A20; --warn:#F08A72; --warn-soft:#3B211B; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#111714; --surface:#19211D; --ink:#E4EBE6; --muted:#97A59D; --line:#2A3530;
-  --leaf:#72C29A; --leaf-soft:#1F3329; --pet:#E3AE52; --pet-soft:#3A2E17; --warn:#F08A72; --warn-soft:#3B211B; color-scheme:dark}
+  --bg:#0B0F14; --surface:#141A21; --ink:#E8ECF1; --muted:#9AA4B0; --line:#252D37;
+  --leaf:#6F95FF; --leaf-soft:#16213D; --pet:#3FCF8E; --pet-soft:#112A20; --warn:#F08A72; --warn-soft:#3B211B; color-scheme:dark}
 html,body{background:var(--bg);color:var(--ink)}
 body{font-family:var(--body);font-size:15px;line-height:1.45}
 *{box-sizing:border-box}
@@ -37,7 +37,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:2px solid var(--leaf);outline-offset:2px}
 .wrap{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px calc(var(--nav-h) + 96px + env(safe-area-inset-bottom,0px))}
-h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.03em;font-weight:800}
 h1{font-size:1.9rem;line-height:1.1}
 h2{font-size:1.15rem}
 .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
@@ -46,7 +46,7 @@ h2{font-size:1.15rem}
 .head{display:flex;flex-direction:column;gap:10px}
 .progress{display:flex;align-items:center;gap:12px;font-variant-numeric:tabular-nums}
 .bar{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
-.bar>i{display:block;height:100%;background:var(--leaf);border-radius:99px;transition:width .3s}
+.bar>i{display:block;height:100%;background:var(--pet);border-radius:99px;transition:width .3s}
 .filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
 .chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 12px;font-size:.85rem;white-space:nowrap}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -57,7 +57,7 @@ h2{font-size:1.15rem}
 .row:first-child{border-top:0}
 .check{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--muted);background:transparent;display:grid;place-items:center;padding:0}
 .check svg{width:16px;height:16px;opacity:0}
-.row.done .check{background:var(--leaf);border-color:var(--leaf)}
+.row.done .check{background:var(--pet);border-color:var(--pet)}
 .row.done .check svg{opacity:1;stroke:var(--surface)}
 .row.done .t-title{text-decoration:line-through;color:var(--muted)}
 .t-body{flex:1;min-width:0;background:none;border:0;text-align:left;padding:0;display:flex;flex-direction:column;gap:3px}
@@ -727,7 +727,7 @@ function createStore(pin){
 }
 function askPin(wrong){
   const v=$('#view');
-  v.innerHTML=`<div class="head"><span class="eyebrow">LigsHouse</span><h1>Digite seu PIN</h1><p class="muted">${wrong?'PIN incorreto. Tente de novo.':'O PIN protege os dados da LigsHouse. Ele fica salvo neste aparelho.'}</p></div>
+  v.innerHTML=`<div class="head"><div style="display:flex;align-items:center;gap:12px"><img src="/icon.svg" alt="" width="44" height="44"><span style="font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:-.04em">Ligs<span style="color:var(--leaf)">House</span></span></div><h1>Digite seu PIN</h1><p class="muted">${wrong?'PIN incorreto. Tente de novo.':'O PIN protege os dados da LigsHouse. Ele fica salvo neste aparelho.'}</p></div>
   <form id="pin-form" class="add-row" autocomplete="off"><input id="pin-in" type="password" inputmode="numeric" placeholder="PIN" aria-label="PIN" required><button class="btn primary" type="submit">Entrar</button></form>`;
   const f=$('#pin-form');f.addEventListener('submit',e=>{e.preventDefault();const p=$('#pin-in').value.trim();if(!p)return;try{localStorage.setItem('rc-pin',p)}catch(_){}boot(p)});
   setTimeout(()=>{const i=$('#pin-in');i&&i.focus()},50);
